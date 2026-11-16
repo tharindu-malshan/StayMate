@@ -1,4 +1,4 @@
---Create the database
+-- Create the database
 
 CREATE DATABASE IF NOT EXISTS staymate
 CHARACTER SET utf8mb4

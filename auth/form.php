@@ -20,3 +20,19 @@ function formValue($name)
 
     return '';
 }
+// Check if the form submission is valid or not
+function checkForm()
+{
+    // Check whether the form uses POST
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        header('Allow: POST');
+        http_response_code(405);
+        exit('Please open the form first.');
+    }
+
+    // Check the CSRF security token
+    if (!hash_equals($_SESSION['csrf_token'], formValue('csrf_token'))) {
+        http_response_code(403);
+        exit('Please go back, refresh the form and try again.');
+    }
+}

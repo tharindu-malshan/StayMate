@@ -36,3 +36,13 @@ function checkForm()
         exit('Please go back, refresh the form and try again.');
     }
 }
+// Redirect to another page with a message
+function goToPage($page, $type, $message)
+{
+    // Save the message in the session
+    $_SESSION[$type] = $message;
+
+    // Redirect to the selected page
+    header('Location: ../' . $page, true, 303);
+    exit;
+}

@@ -43,3 +43,6 @@ if ($password !== $confirmPassword) {
     registerError('Passwords do not match.');
 }
 
+// Connect to the database
+require_once __DIR__ . '/../includes/db.php';
+

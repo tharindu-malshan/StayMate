@@ -13,3 +13,10 @@ $role = formValue('role');
 $password = formValue('password');
 $confirmPassword = formValue('confirmPassword');
 
+// Show an error and return to registration page
+function registrationError($message){
+    goToPage('register.php', 'error', $message);
+}
+
+
+

@@ -14,7 +14,7 @@ $password = formValue('password');
 $confirmPassword = formValue('confirmPassword');
 
 // Show an error and return to registration page
-function registrationError($message){
+function registerError($message){
     goToPage('register.php', 'error', $message);
 }
 // Check full name

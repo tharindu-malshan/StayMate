@@ -49,3 +49,22 @@ require_once __DIR__ . '/../includes/db.php';
 // Hash the password before saving
 $hash = password_hash($password, PASSWORD_DEFAULT);
 
+// Save the new user
+try {
+    $query = $conn->prepare(
+        'INSERT INTO users (full_name, email, phone, role, password_hash)
+         VALUES (?, ?, ?, ?, ?)'
+    );
+
+    $query->bind_param('sssss', $name, $email, $phone, $role, $hash);
+    $query->execute();
+
+} catch (mysqli_sql_exception $e) {
+
+    // Check if the email already exists
+    if ($e->getCode() === 1062) {
+        registerError('This email is already registered.');
+    }
+
+    registerError('Could not create your account. Please try again.');
+}

@@ -11,6 +11,7 @@
         'UTF-8'
     );
 }
+//Get value from form. 
 function formValue($name)
 {
     if (isset($_POST[$name]) && is_string($_POST[$name])) {

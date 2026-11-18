@@ -46,3 +46,6 @@ if ($password !== $confirmPassword) {
 // Connect to the database
 require_once __DIR__ . '/../includes/db.php';
 
+// Hash the password before saving
+$hash = password_hash($password, PASSWORD_DEFAULT);
+

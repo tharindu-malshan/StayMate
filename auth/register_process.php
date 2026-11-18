@@ -68,3 +68,5 @@ try {
 
     registerError('Could not create your account. Please try again.');
 }
+// Redirect to login after successful registration
+goToPage('login.php', 'success', 'Account created. Please sign in.');

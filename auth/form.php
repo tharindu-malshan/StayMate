@@ -46,3 +46,14 @@ function goToPage($page, $type, $message)
     header('Location: ../' . $page, true, 303);
     exit;
 }
+function requireLogin()
+{
+    // Prevent the browser from storing the page
+    header('Cache-Control: no-store');
+
+    // Redirect users who are not logged in
+    if (empty($_SESSION['user_id'])) {
+        header('Location: login.php');
+        exit;
+    }
+}

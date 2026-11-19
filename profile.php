@@ -27,7 +27,7 @@ requireLogin();
             <p><strong>Phone</strong><br><?= escape($_SESSION['phone']) ?></p>
         </div>
         <a href="dashboard.php" class="back-link">
-            <i class="fa-solid fa-arrow-right"></i> Back to Dashboard
+            <i class="fa-solid fa-arrow-left"></i> Back to Dashboard
         </a>
     </div>
 

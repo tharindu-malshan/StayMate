@@ -33,7 +33,7 @@ body { background: #f5f7fb; color: #333; min-height: 100vh; }
     height: 90px;
     border-radius: 50%;
     background: linear-gradient(135deg, #667eea, #764ba2);
-    color: rgb(22, 21, 21);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,7 +80,7 @@ body { background: #f5f7fb; color: #333; min-height: 100vh; }
 }
 .btn-primary {
     background: linear-gradient(135deg, #667eea, #764ba2);
-    color: rgb(22, 22, 22);
+    color: white;
 }
 .btn-primary:hover { opacity: 0.9; }
 .btn-outline {

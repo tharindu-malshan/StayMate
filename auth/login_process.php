@@ -14,3 +14,12 @@ $password = formValue('password');
 if (!filter_var($email, FILTER_VALIDATE_EMAIL) || $password === '') {
     goToPage('login.php', 'error', 'Enter your email and password.');
 }
+
+// Connect to the database
+require_once __DIR__ . '/../includes/db.php';
+
+// Find the user by email
+$query = $conn->prepare(
+    'SELECT user_id, full_name, email, phone, role, password_hash, is_blocked
+     FROM users WHERE email = ?'
+);

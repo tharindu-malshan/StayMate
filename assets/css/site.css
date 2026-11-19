@@ -4,10 +4,15 @@
 .password-toggle { padding: 0; margin: 0 0 12px; border: 0; background: none; color: #584393; cursor: pointer; font: inherit; font-size: 14px; }
 .nav-links a.btn-nav { color: #584393; }
 .profile-card > p { margin-top: 15px; }
-.nav-links { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem; }
+
+.nav-links { display: flex; align-items: center; flex-wrap: wrap; gap: 15px; }
 .nav-links form { display: inline; }
-.nav-logout { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
-.nav-logout:hover { text-decoration: underline; }
+
+.nav-links a, .nav-logout { border: 1px solid white; border-radius: 25px; padding: 8px 20px; }
+.nav-logout { font: inherit; font-size: 15px; color: inherit; background: none; cursor: pointer; }
+.nav-links a:not(.btn-nav):hover, 
+.nav-logout:hover { background: rgba(255,255,255,0.2); }
+
 .navbar { flex-wrap: wrap; gap: .75rem; }
 @media (max-width: 650px) {
     .navbar { height: auto; padding: 14px 18px; }

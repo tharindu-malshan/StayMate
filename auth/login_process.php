@@ -23,3 +23,18 @@ $query = $conn->prepare(
     'SELECT user_id, full_name, email, phone, role, password_hash, is_blocked
      FROM users WHERE email = ?'
 );
+
+// Add email to the query
+$query->bind_param('s', $email);
+
+// Run the query
+$query->execute();
+
+// Get user details
+$result = $query->get_result();
+$user = $result->fetch_assoc();
+
+// Check whether the user exists
+if (!$user) {
+    goToPage('login.php', 'error', 'Unable to sign in with these details.');
+}

@@ -1,0 +1,192 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+body {
+    min-height: 100vh;
+    background: #f5f7fb;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbar .logo i { font-size: 28px; }
+.nav-links { display: flex; gap: 25px; align-items: center; }
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.2s;
+}
+.nav-links a:hover { opacity: 0.85; }
+.btn-nav {
+    background: white;
+    color: #667eea;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.btn-nav:hover { background: #f0f0f0; }
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    padding: 80px 20px 100px;
+}
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 35px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.search-box {
+    background: white;
+    border-radius: 50px;
+    padding: 8px;
+    display: flex;
+    max-width: 650px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 14px 25px;
+    font-size: 16px;
+    border-radius: 50px;
+}
+.search-box button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.search-box button:hover { opacity: 0.9; }
+
+/* Features */
+.section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+}
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.feature-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102,126,234,0.2);
+}
+.feature-card i {
+    font-size: 40px;
+    color: #667eea;
+    margin-bottom: 15px;
+}
+.feature-card h3 { margin-bottom: 10px; font-size: 18px; }
+.feature-card p { color: #666; font-size: 14px; line-height: 1.5; }
+
+/* How it works */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    text-align: center;
+}
+.step {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+}
+.step-num {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto 15px;
+    font-size: 18px;
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 20px;
+    margin: 40px 20px;
+}
+.cta h2 { margin-bottom: 15px; }
+.cta p { margin-bottom: 25px; opacity: 0.9; }
+.cta a {
+    display: inline-block;
+    background: white;
+    color: #667eea;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #2d2d3a;
+    color: #ccc;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .navbar { padding: 12px 20px; flex-wrap: wrap; gap: 10px; }
+    .hero h1 { font-size: 30px; }
+    .search-box { flex-direction: column; border-radius: 15px; }
+    .search-box button { border-radius: 10px; }
+}

@@ -46,3 +46,19 @@ if (
     ) 
     {goToPage('login.php', 'error', 'Unable to sign in with these details.');
 }
+// Create a new session ID
+session_regenerate_id(true);
+
+// Save user details in the session
+$_SESSION['user_id'] = $user['user_id'];
+$_SESSION['user_name'] = $user['full_name'];
+$_SESSION['user_email'] = $user['email'];
+$_SESSION['phone'] = $user['phone'];
+$_SESSION['role'] = $user['role'];
+
+// Create a new CSRF token
+$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+
+// Redirect to dashboard
+header('Location: ../dashboard.php', true, 303);
+exit;

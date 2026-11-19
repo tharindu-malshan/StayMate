@@ -54,7 +54,7 @@ require_once __DIR__ . '/auth/form.php';
     </section>
 
     
-    <section class="section" style="background:#fff; border-radius:20px; margin:0 20px 40px;">
+    <section class="section" style="background:#fff; border-radius:20px; margin:0 20px auto 40px;">
         <h2 class="section-title">How It Works</h2>
         <div class="steps">
             <div class="step">

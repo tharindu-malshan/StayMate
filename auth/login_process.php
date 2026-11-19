@@ -38,3 +38,11 @@ $user = $result->fetch_assoc();
 if (!$user) {
     goToPage('login.php', 'error', 'Unable to sign in with these details.');
 }
+// Check account status and password
+if (
+    $user['is_blocked'] ||
+    empty($user['password_hash']) ||
+    !password_verify($password, $user['password_hash'])
+    ) 
+    {goToPage('login.php', 'error', 'Unable to sign in with these details.');
+}

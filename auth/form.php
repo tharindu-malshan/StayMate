@@ -1,5 +1,6 @@
-// include the session file
+
 <?php
+// include the session file
     require_once __DIR__ . '/../includes/session.php';
 
 //Make text safe to display

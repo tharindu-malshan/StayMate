@@ -55,14 +55,14 @@ body { background: #f5f7fb; color: #333; min-height: 100vh; }
     gap: 15px;
     box-shadow: 0 3px 15px rgba(0,0,0,0.06);
 }
-.welcome h1 { font-size: 20px; }
-.welcome p { color: #666; margin-top: 2px; }
+.welcome h1 { font-size: 24px; }
+.welcome p { color: #666; margin-top: 5px; }
 .role-badge {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     padding: 6px 16px;
     border-radius: 20px;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: bold;
 }
 
